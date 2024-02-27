@@ -1,5 +1,9 @@
 package com.example.stackscroll;
 
+import android.content.Context;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
 public class StackList
 {
     private Node head;
@@ -77,6 +81,18 @@ public class StackList
     public int getTail()
     {
         return tail.getData();
+    }
+
+    public void fillLayout(LinearLayout layout, Context context)
+    {
+        Node position = tail;
+        while (position != null)
+        {
+            TextView tv = new TextView(context);
+            tv.setText(position.getData());
+            layout.addView(tv);
+            position = position.getLink();
+        }
     }
 
 
