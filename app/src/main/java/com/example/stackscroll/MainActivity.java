@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         stack.addTailNode(4);
         stack.showList();
 
-        TextView context = new TextView(this);
-        stack.fillLayout(displayLayout, context.getContext());
+
 
     }
 }
