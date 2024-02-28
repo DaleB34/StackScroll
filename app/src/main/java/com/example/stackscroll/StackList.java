@@ -83,7 +83,17 @@ public class StackList
         return tail.getData();
     }
 
+    public Node getTailNode(){
+        return tail;
+    }
 
+    public Node getNext(Node n){
+        return n.getLink();
+    }
+
+    public int getThisData(Node n ){
+        return n.getData();
+    }
 
 
 
