@@ -73,27 +73,17 @@ public class StackList
         System.out.println();
     }
 
-    public int getHead()
+    public int getHeadData()
     {
         return head.getData();
     }
 
-    public int getTail()
+    public int getTailData()
     {
         return tail.getData();
     }
 
-    public void fillLayout(LinearLayout layout, Context context)
-    {
-        Node position = tail;
-        while (position != null)
-        {
-            TextView tv = new TextView(context);
-            tv.setText(position.getData());
-            layout.addView(tv);
-            position = position.getLink();
-        }
-    }
+
 
 
 
