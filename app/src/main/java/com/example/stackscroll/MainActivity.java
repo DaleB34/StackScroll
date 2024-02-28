@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
         stack.addTailNode(4);
         stack.showList();
 
+        StackList.Node n = stack.getTailNode();
+        while(n != null)
+        {
+            TextView tv = new TextView(this);
+            tv.setText(n.getData());
+            n.getLink();
+        }
 
 
     }

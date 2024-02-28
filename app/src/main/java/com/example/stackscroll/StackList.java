@@ -99,7 +99,7 @@ public class StackList
 
 
 
-    private class Node
+    class Node
     {
 
         private int data;
