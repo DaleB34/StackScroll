@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LinearLayout displayLayout = findViewById(R.id.stackedList);
+        LinearLayout ll = findViewById(R.id.stackedList);
 
         //initialize a list with a few elements in it
         //when adding or deleting an element, refresh the list
@@ -36,22 +36,9 @@ public class MainActivity extends AppCompatActivity {
         stack.addTailNode(4);
         stack.showList();
 
-        ViewGroup viewLayout = (ViewGroup) findViewById(R.id.stackedList);
-        View last = viewLayout.getChildAt(viewLayout.getChildCount() - 1);
-
-        TextView tv = (TextView)
-                LayoutInflater.from(getContext()).inflate(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, null);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-
-        int id = 125;
-        if (last != null) {
-            params.addRule(LinearLayout, last.getId());
-            id = last.getId() + 125;
-        }
-        tv.setLayoutParams(params);
-        tv.setId(id);
-        viewLayout.addView(tv);
+        TextView tv = new TextView(this);
+        tv.setText("head");
+        ll.addView(tv);
 
 
 //        StackList.Node n = stack.getTailNode();
