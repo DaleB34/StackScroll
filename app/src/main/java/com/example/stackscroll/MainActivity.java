@@ -5,9 +5,6 @@ import static java.security.AccessController.getContext;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -34,21 +31,16 @@ public class MainActivity extends AppCompatActivity {
         stack.addTailNode(2);
         stack.addTailNode(3);
         stack.addTailNode(4);
-        stack.showList();
-
-        TextView tv = new TextView(this);
-        tv.setText("head");
-        ll.addView(tv);
 
 
-//        StackList.Node n = stack.getTailNode();
-//        while(n != null)
+        System.out.println(stack.makeSet());
+//        while( != null)
 //        {
 //            TextView tv = new TextView(this);
-//            tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-//            tv.setText(n.getData());
-//            displayLayout.addView(tv);
-//            n= n.getLink();
+//            tv.setText("asdf");
+//            ll.addView(tv);
+//
+//
 //        }
 
 
