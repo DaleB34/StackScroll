@@ -34,6 +34,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         System.out.println(stack.makeSet());
+        int[] booch = stack.makeSet();
+
+        String blah = "";
+        for(int n: booch)
+        {
+            blah+= n+"";
+        }
+
+        TextView tv = new TextView(this);
+            tv.setText(blah);
+            ll.addView(tv);
 //        while( != null)
 //        {
 //            TextView tv = new TextView(this);
