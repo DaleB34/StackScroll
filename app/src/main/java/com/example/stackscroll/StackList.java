@@ -1,9 +1,5 @@
 package com.example.stackscroll;
 
-import android.content.Context;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
 public class StackList
 {
     private Node head;
@@ -73,33 +69,27 @@ public class StackList
         System.out.println();
     }
 
-    public int getHeadData()
+    public int[] makeSet()
     {
-        return head.getData();
-    }
+        int[] result = new int[length()];
 
-    public int getTailData()
-    {
-        return tail.getData();
-    }
+        int i = 0;
+        Node position = tail;
+        while (position != null)
+        {
+            result[i] = position.getData();
+            position = position.getLink();
+            i++;
+        }
 
-    public Node getTailNode(){
-        return tail;
-    }
-
-    public Node getNext(Node n){
-        return n.getLink();
-    }
-
-    public int getThisData(Node n ){
-        return n.getData();
+        return result;
     }
 
 
 
 
 
-    private class Node
+    class Node
     {
 
         private int data;
