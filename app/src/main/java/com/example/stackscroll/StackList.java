@@ -79,6 +79,7 @@ public class StackList
         {
             result[i] = position.getData();
             position = position.getLink();
+            i++;
         }
 
         return result;
