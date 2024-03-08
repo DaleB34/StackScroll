@@ -5,6 +5,7 @@ import static java.security.AccessController.getContext;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         {
             TextView tv = new TextView(this);
             tv.setText(data[i] + "");
+            tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f);
             ll.addView(tv);
         }
 
