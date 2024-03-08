@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <HorizontalScrollView
+    <ScrollView
         android:layout_width="375dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,18 +18,11 @@
             android:id="@+id/stackedList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_gravity="center"
             >
 
-            <TextView
-                android:id="@+id/first"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="head"/>
-
-
         </LinearLayout>
-    </HorizontalScrollView>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
