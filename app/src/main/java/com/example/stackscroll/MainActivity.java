@@ -23,9 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout ll = findViewById(R.id.stackedList);
 
-        //initialize a list with a few elements in it
-        //when adding or deleting an element, refresh the list
-        //to display/refresh the list, go through every node, and for each one, add a new TextView to the scrollview
+        //initialize a stack with a few elements in it
         StackList stack = new StackList();
         stack.addTailNode(0);//head
         stack.addTailNode(1);
@@ -33,26 +31,9 @@ public class MainActivity extends AppCompatActivity {
         stack.addTailNode(3);
         stack.addTailNode(4);//tail
 
+        //fill the scrollview/linear layout with elements from stack
+        stack.fillLayout(ll);
 
-        System.out.println(stack.makeSet());
-        int[] data = stack.makeSet();
-
-        for(int i = 0; i < data.length; i++)
-        {
-            TextView tv = new TextView(this);
-            tv.setText(data[i] + "");
-            tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f);
-            ll.addView(tv);
-        }
-
-//        while( != null)
-//        {
-//            TextView tv = new TextView(this);
-//            tv.setText("asdf");
-//            ll.addView(tv);
-//
-//
-//        }
 
 
     }
