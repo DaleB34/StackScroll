@@ -34,16 +34,7 @@ public class MainActivity extends AppCompatActivity {
         stack.addTailNode(4);//tail
 
 
-        System.out.println(stack.makeSet());
-        int[] data = stack.makeSet();
-
-        for(int i = 0; i < data.length; i++)
-        {
-            TextView tv = new TextView(this);
-            tv.setText(data[i] + "");
-            tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f);
-            ll.addView(tv);
-        }
+        stack.fillLayout(ll);
 
 //        while( != null)
 //        {
