@@ -73,22 +73,6 @@ public class StackList
         System.out.println();
     }
 
-    public int[] makeSet()
-    {
-        int[] result = new int[length()];
-
-        int i = 0;
-        Node position = tail;
-        while (position != null)
-        {
-            result[i] = position.getData();
-            position = position.getLink();
-            i++;
-        }
-
-        return result;
-    }
-
     public void fillLayout(LinearLayout ll)
     {
         Node position = tail;
