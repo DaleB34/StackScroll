@@ -1,17 +1,10 @@
 package com.example.stackscroll;
 
-import static java.security.AccessController.getContext;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import org.w3c.dom.Node;
-
-import java.security.AccessController;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,11 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
         //initialize a stack with a few elements in it
         StackList stack = new StackList();
-        stack.addTailNode(0);//head
-        stack.addTailNode(1);
-        stack.addTailNode(2);
-        stack.addTailNode(3);
-        stack.addTailNode(4);//tail
+
+        for(int i = 0; i< 61; i++)
+        {
+            //0 will be the head, or the bottom, and 60 will be the top, or the tail
+            stack.addTailNode(i);
+        }
 
         //fill the scrollview/linear layout with elements from stack
         stack.fillLayout(ll);
